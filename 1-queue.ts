@@ -64,14 +64,18 @@ export class Queue<T> {
   print(): void {
     console.log(this.items.join(" <- "));
   }
+
+  getItems(): T[] {
+    return this.items;
+  }
 }
 
-const queue = new Queue<number>(); // Create a queue that stores numbers
-queue.enqueue(10);
-queue.enqueue(20);
-queue.enqueue(30);
-queue.print(); // Output: 10 <- 20 <- 30
-console.log(queue.dequeue()); // 10
-console.log(queue.front()); // 20
-console.log(queue.size()); // 2
-console.log(queue.isEmpty()); // false
+// const queue = new Queue<number>(); // Create a queue that stores numbers
+// queue.enqueue(10);
+// queue.enqueue(20);
+// queue.enqueue(30);
+// queue.print(); // Output: 10 <- 20 <- 30
+// console.log(queue.dequeue()); // 10
+// console.log(queue.front()); // 20
+// console.log(queue.size()); // 2
+// console.log(queue.isEmpty()); // false
