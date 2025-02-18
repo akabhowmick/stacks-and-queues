@@ -25,45 +25,43 @@
 // - Print elements in order, separated by " | " with the top of the stack on the right.
 
 // Step 1: Create a Stack class
-class Stack<T> {
+export class Stack<T> {
   private items: T[] = [];
 
-  //Step 2: Implement push method
+  constructor() {}
   push(item: T): void {
     this.items.push(item);
   }
 
-  // Step 3: Implement pop method
   pop(): T | undefined {
     return this.items.pop();
   }
 
-  // Step 4: Implement peek method
   peek(): T | undefined {
     return this.items[this.items.length - 1];
   }
 
-  // Step 5: Implement isEmpty and size methods
   isEmpty(): boolean {
     return this.items.length === 0;
   }
+
   size(): number {
     return this.items.length;
   }
 
-  // Step 6: Implement print method
   print(): void {
     console.log(this.items.join(" | "));
   }
 }
 
 // Uncomment The Code Below to See If It Works! Feel free to write more code to test and examine the functionality of the stack.
-const stack = new Stack<number>(); // Create a stack that stores numbers
-stack.push(10);
-stack.push(20);
-stack.push(30);
-stack.print(); // Output: 10 | 20 | 30
-console.log(stack.pop()); // 30
-console.log(stack.peek()); // 20
-console.log(stack.size()); // 2
-console.log(stack.isEmpty()); // false
+// const stack1 = new Stack<number>(); // Create a stack that stores numbers
+// stack1.push(10);
+// stack1.push(20);
+// stack1.push(30);
+// stack1.print(); // Output: 10 | 20 | 30
+// console.log(stack1.pop()); // 30
+// console.log(stack1.pop()); // 20
+// console.log(stack1.peek()); // 10
+// console.log(stack1.size()); // 1
+// console.log(stack1.isEmpty()); // false

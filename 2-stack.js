@@ -1,7 +1,10 @@
+"use strict";
 // Step 1: Create a Stack class
 // - Define a class named Stack.
 // - Look into the private keyword. Make sure we can initialize a stack of any input type.
 // - Initialize the stack in the constructor. Remember, we may need to utilize other data structures here to create the behavior we are looking for.
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Stack = void 0;
 // Step 2: Implement push method
 // - Create a method to add an element to the stack.
 // - Add the element to the end of the array (top of the stack).
@@ -23,38 +26,34 @@ var Stack = /** @class */ (function () {
     function Stack() {
         this.items = [];
     }
-    //Step 2: Implement push method
     Stack.prototype.push = function (item) {
         this.items.push(item);
     };
-    // Step 3: Implement pop method
     Stack.prototype.pop = function () {
         return this.items.pop();
     };
-    // Step 4: Implement peek method
     Stack.prototype.peek = function () {
         return this.items[this.items.length - 1];
     };
-    // Step 5: Implement isEmpty and size methods
     Stack.prototype.isEmpty = function () {
         return this.items.length === 0;
     };
     Stack.prototype.size = function () {
         return this.items.length;
     };
-    // Step 6: Implement print method
     Stack.prototype.print = function () {
         console.log(this.items.join(" | "));
     };
     return Stack;
 }());
+exports.Stack = Stack;
 // Uncomment The Code Below to See If It Works! Feel free to write more code to test and examine the functionality of the stack.
-var stack = new Stack(); // Create a stack that stores numbers
-stack.push(10);
-stack.push(20);
-stack.push(30);
-stack.print(); // Output: 10 | 20 | 30
-console.log(stack.pop()); // 30
-console.log(stack.peek()); // 20
-console.log(stack.size()); // 2
-console.log(stack.isEmpty()); // false
+var stack1 = new Stack(); // Create a stack that stores numbers
+stack1.push(10);
+stack1.push(20);
+stack1.push(30);
+stack1.print(); // Output: 10 | 20 | 30
+console.log(stack1.pop()); // 30
+console.log(stack1.peek()); // 20
+console.log(stack1.size()); // 2
+console.log(stack1.isEmpty()); // false

@@ -27,7 +27,7 @@
 // Uncomment The Code Below to See If It Works! Feel free to write more code to test and examine the functionality of the queue.
 
 // Step 1: Create a Queue class
-class Queue<T> {
+export class Queue<T> {
   private items: T[] = [];
 
   constructor(initialValues?: T[]) {
